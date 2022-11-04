@@ -1,0 +1,35 @@
+#Survival time analysis with ANOVA 
+# Data acquisition and variable settings - File: 'ANOVA.csv'
+
+
+
+data_complete = read.csv2(file.choose(), header=T, sep=";", dec=".", na.string="NA")
+head(data_complete)
+
+species <- as.factor(data_complete$Specie)
+survival <- as.numeric(data_complete$Sopravvivenza)
+
+shapiro.test(survival)
+
+
+#anova  total to compare two species
+one.way.sur <- aov(survival ~ species, data = data_complete)
+summary(one.way.sur)
+
+
+tukey.one.way.sur<-TukeyHSD(one.way.sur)
+tukey.one.way.sur
+
+
+# Pairwise comparison:
+
+library(multcompView)
+library(emmeans)
+marginal_choice = emmeans(one.way.sur, ~ species)
+pairs(marginal_choice, adjust="Tukey")
+
+# Letters of significance:
+
+library(multcomp)
+lettere_choice <- cld(marginal_choice, alpha=0.05, Letters=letters, adjust="Tukey")
+lettere_choice
