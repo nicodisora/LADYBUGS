@@ -1,0 +1,44 @@
+#Survival time analysis with Survival analysis 
+# Data acquisition and variable settings - File: 'logrank.csv'
+
+
+
+data_complete = read.csv2(file.choose(), header=T, sep=";", dec=".", na.string="NA")
+head(data_complete)
+
+library(survival)
+library(ggplot2)
+library(ggpubr)
+library(survminer)
+library(cowplot)
+library(rlang)
+
+data_complete = read.csv2(file.choose(), header=T, sep=";", dec=".", na.string="NA")
+head(data_complete)
+
+
+SPECIES <- as.factor(data_complete$Specie)
+STATUS <- as.numeric(data_complete$Stato)
+TIME <- as.numeric(data_complete$Sopravvivenza)
+
+OBJECT <- Surv(TIME,STATUS)
+
+SURV_COCC_SP <- survfit(Surv(TIME,STATUS) ~ SPECIES, data=data_complete)
+summary(SURV_COCC_SP)
+logRank <- survdiff(Surv(TIME,STATUS) ~ SPECIES, data=data_complete)
+pval <- p.val <- 1 - pchisq(logRank$chisq, length(logRank$n) - 1)
+pval
+logRank
+
+PLOT_COCC_SP <- ggsurvplot(SURV_COCC_SP,
+                               data = data_complete,
+                               conf.int = T,
+                               censor.size=8, 
+                               pval = F,
+                               xlab="Time (days)",xlim=c(0,75),break.time.by =10,
+                               risk.table = F,
+                               linetype = c("strata"),font.y=22,font.x=22,font.xtickslab= 22,font.ytickslab =22,
+                               palette = c("chocolate2", "darkgreen"), size= 1)
+PLOT_COCC_SP
+formatC(as.numeric(as.character(round(  7.4e-05, 5))), digits = 5, format = "f")
+format(round(1.9e-05,5), nsmall = 2)
