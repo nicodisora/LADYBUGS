@@ -1,0 +1,41 @@
+Species;Decision;;Species;Prey;Reaction
+CRY;choice;;CRY;twig;
+CRY;choice;;CRY;twig;
+CRY;choice;;CRY;twig;bite
+CRY;choice;;CRY;twig;bite
+CRY;choice;;CRY;twig;bite
+CRY;choice;;CRY;Ad. Fem.;bite
+CRY;choice;;CRY;Ad. Fem.;bite
+CRY;No-choice;;EXO;twig;
+CRY;No-choice;;EXO;twig;
+CRY;No-choice;;EXO;twig;
+CRY;No-choice;;EXO;twig;
+CRY;No-choice;;EXO;twig;bite
+CRY;No-choice;;EXO;twig;bite
+CRY;No-choice;;EXO;twig;bite
+CRY;No-choice;;EXO;twig;bite
+CRY;No-choice;;EXO;twig;bite
+CRY;No-choice;;EXO;Ad. Fem.;bite
+CRY;No-choice;;EXO;Ad. Fem.;bite
+CRY;No-choice;;EXO;Ad. Fem.;bite
+CRY;No-choice;;EXO;Ad. Fem.;bite
+EXO;choice;;EXO;Ad. Fem.;
+EXO;choice;;EXO;Ad. Fem.;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;choice;;;;
+EXO;No-choice;;;;
+EXO;No-choice;;;;
+EXO;No-choice;;;;
+EXO;No-choice;;;;
+EXO;No-choice;;;;
