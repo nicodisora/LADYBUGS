@@ -33,10 +33,10 @@ library(multcompView)
 library(emmeans)
 
 marginal_tot = emmeans(GenLin_tot, ~ plant)
-pairs(marginal_tot, adjust="sidak")
+pairs(marginal_tot, adjust="Dunnett")
 
 # Letters of significance:
 
 library(multcomp)
-lettere_tot <- cld(marginal_tot, alpha=0.05, Letters=letters, adjust="sidak")
+lettere_tot <- cld(marginal_tot, alpha=0.05, Letters=letters, adjust="Dunnett")
 lettere_tot
