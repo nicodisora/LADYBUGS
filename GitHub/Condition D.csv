@@ -1,0 +1,16 @@
+test;prova;Exo;Cry
+5 min;with exo;9;8
+;with exo no eat;8;2
+;with cry;6;6
+;with cry no eat;4;2
+;no choiche;3;12
+1 h dopo;Eat with exo;5;7
+;No-eat with exo;10;7
+;Eat with cry;7;6
+;No-eat with cry;8;8
+;Move start sector;0;2
+2 h dopo;Eat with exo;4;4
+;No-eat with exo;9;8
+;Eat with cry;5;1
+;No-eat with cry;12;16
+;Move start sector;0;1

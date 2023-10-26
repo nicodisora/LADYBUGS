@@ -1,0 +1,16 @@
+test;prova;Exo;Cry
+5 min;with predator;12;6
+;with predator no eat;6;3
+;without predator;6;12
+;without predator no eat;0;2
+;no choiche;6;7
+1 h dopo;Eat with predator;5;4
+;No-eat with predator;13;5
+;Eat without predator;3;12
+;No-eat without predator;3;8
+;Move start sector;6;1
+2 h dopo;Eat with predator;6;3
+;No-eat with predator;17;7
+;Eat without predator;2;5
+;No-eat without predator;3;10
+;Move start sector;2;5

@@ -1,0 +1,34 @@
+# Data acquisition and variable settings - File: 'Timing response Condtion A B C D.csv'
+
+
+data_complete = read.csv2(file.choose(), header=T, sep=";", dec=",", na.string="NA")
+head(data_complete)
+
+specie <- as.factor(data_complete$Specie)
+
+minuti<- as.numeric(data_complete$Minuti)
+
+
+
+# GLM - Significant differences among insects counted on twigs.
+# Factor is treatment.
+# Negative binomial as GLM distribution - It requires "MASS" package
+
+library(MASS)
+library(lme4)
+
+GenLin_man <- glm.nb(minuti ~ specie, data=data_complete)
+summary(GenLin_man)
+
+# Pairwise comparison:
+
+library(multcompView)
+library(emmeans)
+marginal_man = emmeans(GenLin_man, ~ specie)
+pairs(marginal_man, adjust="Dunnett")
+
+# Letters of significance:
+
+library(multcomp)
+lettere_man <- cld(marginal_man, alpha=0.05, Letters=letters, adjust="Dunnett")
+lettere_man
