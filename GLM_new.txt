@@ -1,5 +1,5 @@
 
-# Data analysis: net sleeves
+# Data analysis: net sleeves 2022
 
 # Data acquisition and variable settings - File: 'GLM.csv'
 # This is the third analysis: GLM with negative binomial distribution carried out
