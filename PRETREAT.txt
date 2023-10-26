@@ -1,5 +1,5 @@
 
-# Data analysis: Pre-treatments condition
+# Data analysis: Pre-treatments condition 2022
 
 # Data acquisition and variable settings - File: 'Pretreat.csv'
 # GLM with negative binomial distribution carried out
