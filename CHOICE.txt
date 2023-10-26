@@ -1,14 +1,8 @@
 #T-test comparison among Exochomus quadripustulatus and Cryptolaemus mountrouzieri for the choice test
-# Data acquisition and variable settings - File: 'CHOICE.csv'
+# Data acquisition and variable settings - File: 'Condition A B C D D2.csv'
 
 data_complete = read.csv2(file.choose(), header=T, sep=";", dec=".", na.string="NA")
 head(data_complete)
-
-species <- as.factor(data_complete$Species)
-decision <- as.factor(data_complete$Decision)
-prey <- as.factor(data_complete$Prey)
-action <- as.factor(data_complete$Reaction)
-
 
 
 #two-tailed Binomial test
@@ -16,10 +10,3 @@ action <- as.factor(data_complete$Reaction)
 binom.test(observed, repetitions, p = 0.5,
            +            alternative = c("two.sided", "less", "greater"),
            +            conf.level = 0.95)
-
-
-#Chi-square Goodness of Fit Test
-
-prey <- chisq.test(specie, scelta, correct=FALSE)
-
-prey
